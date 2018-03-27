@@ -3,6 +3,7 @@ package org.mediawiki.utilities;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
@@ -20,6 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class BrowserUtils {
 
@@ -101,6 +103,30 @@ public class BrowserUtils {
 		File outputFile = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(outputFile, new File(System.getProperty("user.dir")
 				+ "//src//test//java//com//companyname//projectname//screenshots//" + fileName + ".jpg"));
+	}
+	
+	public static boolean checkIfAlphabeticalOrder(List<WebElement> alloptions) {
+		List<String> listValues = new ArrayList<>();
+		for(int i=1;i<alloptions.size();i++) {
+			listValues.add(alloptions.get(i).getText());
+		}
+		ArrayList<String> sortedList= new ArrayList<>();
+		sortedList.addAll(listValues);
+		Collections.sort(sortedList);
+		if(listValues.equals(sortedList)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static void scrollDown() {
+		JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+		jse.executeScript("window.scrollBy(0,550)", "");
+	}
+
+	public static void scrollUp() {
+		JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+		jse.executeScript("window.scrollBy(250,0)", "");
 	}
 
 	/*
