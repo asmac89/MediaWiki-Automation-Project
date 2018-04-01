@@ -4,7 +4,7 @@ Background:
 Given: I logged into MediaWiki
 
 Scenario: Editing Main Page topics
-Given The main page is displayed
+Given The Main Page is displayed
 When I click on the Edit tab button
 Then Editing Main Page topic title should be displayed 
 Then I click inside the topic input box
