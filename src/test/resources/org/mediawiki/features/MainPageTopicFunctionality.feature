@@ -12,9 +12,12 @@ And I type "Testing: Hello TechNinjas!"
 Then I click on save changes button
 Then I should be on the main page
 Then "Your edit was saved" popup should be displayed
+Then I log out of the application
+
 
 Scenario: Reading Main Page topics
 Given The main page is displayed
 When I scroll down the main page
 Then "TechNinja's Topic" section should be displayed
 And under "TechNinja's Topic", "TechNinjas are awesome!" should be displayed
+Then I log out of the application
