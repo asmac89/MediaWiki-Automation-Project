@@ -1,4 +1,3 @@
-
 Feature: Check Search Box
 
 Background: 
@@ -19,6 +18,3 @@ Background:
 		When I click on the Mark all pages visited
 		And Mark all pages visited button should disappear
 		Then I log out of the application
-		
-		
-			

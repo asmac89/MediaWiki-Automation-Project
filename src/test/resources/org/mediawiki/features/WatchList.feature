@@ -15,4 +15,3 @@ Background:
 		Then I click "Show" button
 		And I should see result displayed
 		Then I log out of the application
-		
