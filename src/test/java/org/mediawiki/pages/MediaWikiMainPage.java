@@ -27,11 +27,7 @@ public class MediaWikiMainPage {
 	@FindBy(linkText="Read")
 	public WebElement MainPageReadButton;
 	
-	@FindBy(name="wpTextbox1")
-	public WebElement MainPageEditInputBox;
 	
-	@FindBy(name="wpSave")
-	public WebElement MainPageSaveButton;
 	
 
 }
