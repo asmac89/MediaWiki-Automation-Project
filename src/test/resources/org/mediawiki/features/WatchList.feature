@@ -15,7 +15,7 @@ Background:
 		Then The text above shoould contains "changes in the last hour"
 		Then I log out of the application
 
-	Scenario:	 
+	Scenario:	Dropdown list contains proper text and Legend box works properly 
 		 Given  I see the Main page displayed
 			When I click on the WatchList tab
 			Then I should see the Legend box
