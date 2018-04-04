@@ -21,7 +21,17 @@ public class MediaWikiMainPage {
 	@FindBy(xpath="//a[@title='Special:AllPages']")
 	public WebElement allPagesLink;
 	
+	@FindBy(linkText="Edit")
+	public WebElement MainPageEditButton;
 	
+	@FindBy(linkText="Read")
+	public WebElement MainPageReadButton;
+	
+	@FindBy(name="wpTextbox1")
+	public WebElement MainPageEditInputBox;
+	
+	@FindBy(name="wpSave")
+	public WebElement MainPageSaveButton;
 	
 
 }
