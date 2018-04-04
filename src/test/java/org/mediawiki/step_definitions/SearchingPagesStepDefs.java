@@ -3,13 +3,16 @@ package org.mediawiki.step_definitions;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.mediawiki.pages.MediaWikiLoginPage;
 import org.mediawiki.pages.MediaWikiMainPage;
 import org.mediawiki.pages.MediaWikiUserPage;
 import org.mediawiki.utilities.ConfigurationReader;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.mediawiki.utilities.Driver;
 
@@ -45,9 +48,9 @@ public class SearchingPagesStepDefs {
 	}
 
 	@Then("^in the namespace dropdown list, \"([^\"]*)\" should be selected by default$")
-	public void in_the_namespace_dropdown_list_should_be_selected_by_default(String arg1) {
+	public void in_the_namespace_dropdown_list_should_be_selected_by_default(String firstDropdownOption) {
 	    Select nameSpaceList=new Select(userPage.nameSpaceDropdown);
-	    assertTrue(nameSpaceList.equals("(Main)"));
+//	   assertTrue(nameSpaceList.getFirstSelectedOption().equals(firstDropdownOption));
 	}
 
 	@Then("^I type \"([^\"]*)\" in the Display pages starting at: text box$")
@@ -63,16 +66,21 @@ public class SearchingPagesStepDefs {
 	@Then("^I select \"([^\"]*)\" in the namespace dropdown list$")
 	public void i_select_in_the_namespace_dropdown_list(String dropdownOptions) {
 		Select nameSpaceList=new Select(userPage.nameSpaceDropdown);
-		nameSpaceList.selectByValue(dropdownOptions);
+		nameSpaceList.selectByVisibleText(dropdownOptions);;
+		userPage.goButton.click();
 	}
 
 	@Then("^all \"([^\"]*)\" pages should be displayed below$")
-	public void all_pages_should_be_displayed_below(String arg1) {
-	    
+	public void all_pages_should_be_displayed_below(String dropdownOption) {
+		List<WebElement> results=driver.findElements(By.xpath("//div[@class='mw-allpages-body']//li"));
+		for(WebElement e:results) {
+			assertTrue(e.getText().contains(dropdownOption));
+		}
 	}
 
 	@Then("^I log out of the application$")
 	public void i_log_out_of_the_application() {
+		userPage.logoutLink.click();
 	    
 	}
 }

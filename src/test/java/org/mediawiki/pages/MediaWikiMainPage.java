@@ -15,10 +15,10 @@ public class MediaWikiMainPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[@accesskey='q']")
+	@FindBy(linkText="Special pages")
 	public WebElement specialPagesLink;
 	
-	@FindBy(xpath="//a[@title='Special:AllPages']")
+	@FindBy(linkText="All pages")
 	public WebElement allPagesLink;
 	
 	@FindBy(linkText="Edit")
