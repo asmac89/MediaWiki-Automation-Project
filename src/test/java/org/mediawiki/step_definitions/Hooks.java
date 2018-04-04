@@ -18,7 +18,6 @@ public class Hooks {
 	public void setup(Scenario scenario) {
 		WebDriver driver = Driver.getDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
 	}
 
 	@After
@@ -31,7 +30,7 @@ public class Hooks {
 			scenario.embed(screenshot, "image/png");
 		}
 		
-		Driver.closeDriver();
+	//	Driver.closeDriver();
 
 	}
 
