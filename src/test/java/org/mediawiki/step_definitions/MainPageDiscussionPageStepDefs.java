@@ -1,14 +1,23 @@
 package org.mediawiki.step_definitions;
 
+import static org.testng.Assert.assertTrue;
+
+import org.mediawiki.pages.MediaWikiMainPage;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class MainPageDiscussionPageStepDefs {
+	MediaWikiMainPage MainPage=new MediaWikiMainPage();
+	
+	
+	
 	@Given("^The Main page is displayed$")
 	public void the_Main_page_is_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	assertTrue(	MainPage.isAtMainPage());
+		
+	 
 	}
 
 	@Then("^Talk:Main Page title should be displayed$")

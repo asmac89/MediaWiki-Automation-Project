@@ -1,8 +1,9 @@
-@andytest
 
+@andytest
 Feature: Main Page topic Functionalities
+
 Background: 
-Given: I logged into MediaWiki
+Given I logged into MediaWiki
 
 
 Scenario: Adding Main Page topic 

@@ -27,6 +27,13 @@ public class MediaWikiMainPage {
 	@FindBy(linkText="Read")
 	public WebElement MainPageReadButton;
 	
+	@FindBy(id="mw-editbutton-headline")
+	public WebElement MainPageHeadline;
+	
+	public boolean isAtMainPage() {
+		return driver.getTitle().equals("Cybertek's Wiki!");
+	}
+	
 	
 	
 
