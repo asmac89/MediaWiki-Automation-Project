@@ -1,4 +1,5 @@
 
+@andytest
 Feature: Main Page topic Functionalities
 Background: 
 Given: I logged into MediaWiki
@@ -20,7 +21,6 @@ When I click on the Edit tab
 Then Editing Main Page topic title should be displayed 
 And I type "TechNinjas are awesome!" inside the topic input box
 Then I click on save changes button
-Then The main page is displayed
 Then "Your edit was saved" popup should be displayed
 And "TechNinjas are awesome!" should be displayed 
 Then I log out of the application
