@@ -10,7 +10,7 @@ Scenario: Adding Main Page topic
 Given The Main page is displayed
 When I click on the Edit tab 
 Then Editing Main Page topic title should be displayed 
-Then I click on the Level 2 Headline text button
+Then I click on the Level 2 Headline text button for Main page
 Then I type "TechNinja's Topic" 
 Then I click on save changes button
 Then "Your edit was saved" popup should be displayed

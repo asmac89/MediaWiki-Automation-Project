@@ -16,4 +16,8 @@ private WebDriver driver;
 	@FindBy(name="Edit")
 	public WebElement Edit;
 	
+	public boolean isAtDiscussionPage() {
+		return driver.getTitle().equals("Talk:Main Page - Cybertek's Wiki!");
+	}
+	
 }
