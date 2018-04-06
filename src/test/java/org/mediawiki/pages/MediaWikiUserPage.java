@@ -42,4 +42,6 @@ public class MediaWikiUserPage {
 	@FindBy(xpath="//div[@id='p-views']//li")
 	public WebElement discussionTabs;
 	
+	
+	
 }
