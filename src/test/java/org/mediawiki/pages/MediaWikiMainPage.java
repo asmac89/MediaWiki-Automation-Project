@@ -30,6 +30,9 @@ public class MediaWikiMainPage {
 	@FindBy(id="mw-editbutton-headline")
 	public WebElement MainPageHeadline;
 	
+	@FindBy(linkText="Techninjas7")
+	public WebElement techNinjasLink;
+	
 	public boolean isAtMainPage() {
 		return driver.getTitle().equals("Cybertek's Wiki!");
 	}

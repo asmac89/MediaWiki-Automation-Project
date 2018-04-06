@@ -3,11 +3,16 @@ Feature: Editing discussion tab on user page
   Background: 
     Given I logged into MediaWiki
 
-  @asmatestcase
+  @asmatest
   Scenario: Edit the Discussion page
     Given that I see the User page displayed
     When I click on the Discussion tab
-    Then I should see the Read, Edit, Add topic, View history and Star image tabs
+    Then I should see the Discussion tabs
+      | read         | Read         |
+      | edit         | Edit         |
+      | add_topic    | Add topic    |
+      | view_history | View history |
+      | unwatch      | Unwatch      |
     When I click on the Edit tab
     Then Editing User talk:Techninjas7 should be displayed
     And I should be able to type any "String" characters in the text field below
