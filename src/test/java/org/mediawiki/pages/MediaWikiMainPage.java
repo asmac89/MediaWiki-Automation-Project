@@ -30,7 +30,10 @@ public class MediaWikiMainPage {
 	
 	@FindBy(id="mw-editbutton-headline")
 	public WebElement MainPageHeadline;
-	
+
+	@FindBy(linkText="Techninjas7")
+	public WebElement techNinjasLink;
+
 	@FindBy(xpath="//div[contains(text(),'Your edit was')]")
 	public WebElement SavedPopup;
 	
