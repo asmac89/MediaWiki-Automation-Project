@@ -29,9 +29,12 @@ public class MediaWikiLoginPage {
 	
 	public void login(String userName, String pwd) {
 		loginLink.click();
-		username.sendKeys(userName);
+		if(!username.getAttribute("value").equalsIgnoreCase(userName)) {
+			username.sendKeys(userName);
+		}
 		password.sendKeys(pwd);
 		loginButton.click();
-	}
+	
 
+}
 }

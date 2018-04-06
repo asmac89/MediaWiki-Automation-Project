@@ -5,13 +5,16 @@ import static org.testng.Assert.assertTrue;
 import org.mediawiki.pages.MediaWikiMainPage;
 import org.mediawiki.pages.MediaWikiMainPageDiscussionPage;
 import org.mediawiki.pages.MediaWikiMainPageDiscussionPageEditPage;
+import org.mediawiki.pages.MediaWikiMainPageEditPage;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class MainPageDiscussionPageStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
+	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();
 	MediaWikiMainPageDiscussionPageEditPage DEditPage=new MediaWikiMainPageDiscussionPageEditPage();
 	
@@ -23,74 +26,52 @@ public class MainPageDiscussionPageStepDefs {
 	 
 	}
 
+@When("^I click on the Edit tab on main page$")
+public void i_click_on_the_Edit_tab_on_main_page() {
+    MainPage.MainPageEditButton.click();
+}
+
+@Then("^Editing Main Page topic title should be displayed$")
+public void editing_Main_Page_topic_title_should_be_displayed() {
+  assertTrue( MEditPage.isAtEditPage());
+}
+
+@Then("^I click on the Level (\\d+) Headline text button for Main page$")
+public void i_click_on_the_Level_Headline_text_button_for_Main_page(int arg1) {
+  MEditPage.Headline.click();
+}
+
+@Then("^I type \"([^\"]*)\"$")
+public void i_type(String text) {
+    MEditPage.MainPageEditInputBox.sendKeys(text);
+}
+
+@Then("^I click on save changes button on edit page$")
+public void i_click_on_save_changes_button_on_edit_page() {
+   MEditPage.MainPageEditSaveButton.click();
+}
+
+@Then("^\"([^\"]*)\" popup should be displayed$")
+public void popup_should_be_displayed(String arg1) {
+  assertTrue( MainPage.SavedPopup.isDisplayed());
+}
+
+
+@Then("^\"([^\"]*)\" topic should be displayed$")
+public void topic_should_be_displayed(String text) {
+	  assertTrue(MainPage.Topic.getText().equals(text));
+
+}
+@Then("^\"([^\"]*)\" description should be displayed$")
+public void description_should_be_displayed(String text) {
+  assertTrue(MainPage.Description.getText().contains(text));
+}
+
+
 	@Then("^Talk:Main Page title should be displayed$")
 	public void talk_Main_Page_title_should_be_displayed() {
 	  assertTrue(DiscussionPage.isAtDiscussionPage());
 	}
 
-	@Then("^I click on the Level (\\d+) Headline text button on Discussion page$")
-	public void i_click_on_the_Level_Headline_text_button_on_Discussion_page(int arg1) {
-	  
-	}
-
-	@Then("^I click on the Level (\\d+) Headline text button for Main page$")
-	public void i_click_on_the_Level_Headline_text_button_for_Main_page(int arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^I type \"([^\"]*)\"$")
-	public void i_type(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^\"([^\"]*)\" popup should be displayed$")
-	public void popup_should_be_displayed(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^\"([^\"]*)\" should be displayed$")
-	public void should_be_displayed(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Given("^The Main Page is displayed$")
-	public void the_Main_Page_is_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^I click on the internal link button$")
-	public void i_click_on_the_internal_link_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^\"([^\"]*)\" link should be displayed$")
-	public void link_should_be_displayed(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^\"([^\"]*)\" is clickable$")
-	public void is_clickable(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^Editing Main Page topic title should be displayed$")
-	public void editing_Main_Page_topic_title_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Then("^I type \"([^\"]*)\" inside the topic input box$")
-	public void i_type_inside_the_topic_input_box(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
 
 }
