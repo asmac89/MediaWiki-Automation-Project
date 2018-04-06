@@ -12,7 +12,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class MainPageDiscussionPageStepDefs {
+public class MainPageStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
 	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();
@@ -21,9 +21,7 @@ public class MainPageDiscussionPageStepDefs {
 	
 	@Given("^The Main page is displayed$")
 	public void the_Main_page_is_displayed() {
-	assertTrue(	MainPage.isAtMainPage());
-		
-	 
+	assertTrue(	MainPage.isAtMainPage()); 
 	}
 
 @When("^I click on the Edit tab on main page$")
@@ -36,7 +34,7 @@ public void editing_Main_Page_topic_title_should_be_displayed() {
   assertTrue( MEditPage.isAtEditPage());
 }
 
-@Then("^I click on the Level (\\d+) Headline text button for Main page$")
+@Then("^I click on the Level (\\d+) Headline text button$")
 public void i_click_on_the_Level_Headline_text_button_for_Main_page(int arg1) {
   MEditPage.Headline.click();
 }
@@ -68,10 +66,6 @@ public void description_should_be_displayed(String text) {
 }
 
 
-	@Then("^Talk:Main Page title should be displayed$")
-	public void talk_Main_Page_title_should_be_displayed() {
-	  assertTrue(DiscussionPage.isAtDiscussionPage());
-	}
 
 
 }

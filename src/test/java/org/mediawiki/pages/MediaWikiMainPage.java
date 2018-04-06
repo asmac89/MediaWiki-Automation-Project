@@ -40,13 +40,14 @@ public class MediaWikiMainPage {
 	@FindBy(xpath="//div[@class='mw-parser-output']//p")
 	public WebElement Description;
 	
+	@FindBy(linkText="Discussion")
+	public WebElement DiscussionPage;
+	
 	public boolean isAtMainPage() {
 		return driver.getTitle().equals("Cybertek's Wiki!");
 	}
 	
-	public void CatchAlert() {
-		Alert alert=driver.switchTo().alert();
-	}
+
 	
 	
 	
