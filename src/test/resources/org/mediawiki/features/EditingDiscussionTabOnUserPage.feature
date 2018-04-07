@@ -3,7 +3,7 @@ Feature: Editing discussion tab on user page
   Background: 
     Given I logged into MediaWiki
 
- 
+ @asmatest
   Scenario: Edit the Discussion page
     Given that I see the User page displayed
     When I click on the Discussion tab

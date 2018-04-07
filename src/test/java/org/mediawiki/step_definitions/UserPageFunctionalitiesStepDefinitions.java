@@ -37,12 +37,6 @@ public class UserPageFunctionalitiesStepDefinitions {
 		throw new PendingException();
 	}
 
-	@Then("^I log out of the application$")
-	public void i_log_out_of_the_application() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
-	}
-
 	@Then("^I click on the \"([^\"]*)\" tab$")
 	public void i_click_on_the_tab(String arg1) {
 		// Write code here that turns the phrase above into concrete actions
