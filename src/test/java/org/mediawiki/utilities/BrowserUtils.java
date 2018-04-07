@@ -1,3 +1,4 @@
+
 package org.mediawiki.utilities;
 
 import java.io.File;

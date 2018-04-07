@@ -6,10 +6,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		plugin= {"pretty",
 				"html:target/cucumber-report"},
-		tags="@asmatest",
+		tags="@andytest",
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",
-		dryRun=true //by default, it is false
+		dryRun=false //by default, it is false
 		)
 
 public class CukesRunner extends AbstractTestNGCucumberTests {

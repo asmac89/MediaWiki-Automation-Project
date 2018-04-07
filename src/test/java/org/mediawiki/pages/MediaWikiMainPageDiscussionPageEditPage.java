@@ -14,8 +14,8 @@ private WebDriver driver;
 		PageFactory.initElements(driver, this);			
 	}
 	
-	@FindBy(id="mw-editbutton-headline")
-	public WebElement Dheadline;
+
+	
 	
 
 }

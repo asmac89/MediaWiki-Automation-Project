@@ -13,11 +13,32 @@ private WebDriver driver;
 		this.driver=Driver.getDriver();
 		PageFactory.initElements(driver, this);			
 	}
-	@FindBy(name="Edit")
+	@FindBy(linkText="Edit")
 	public WebElement Edit;
+	
+	@FindBy(id="TechNinja.27s_How_to_become_a_SDET")
+	public WebElement DTopic;
 	
 	public boolean isAtDiscussionPage() {
 		return driver.getTitle().equals("Talk:Main Page - Cybertek's Wiki!");
+	}
+	
+	
+	
+	
+	
+	
+	
+	//mainpage edit page down here:
+	
+	@FindBy(id="mw-editbutton-headline")
+	public WebElement Dheadline;
+	
+	@FindBy(id="mw-editbutton-link")
+	public WebElement internalLink;
+	
+	public boolean isAtDiscussionEditPage() {
+		return driver.getTitle().equals("Editing Talk:Main Page - Cybertek's Wiki!");
 	}
 	
 }
