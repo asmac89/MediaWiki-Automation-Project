@@ -2,9 +2,9 @@ package org.mediawiki.step_definitions;
 
 import static org.testng.Assert.assertTrue;
 
+
 import org.mediawiki.pages.MediaWikiMainPage;
 import org.mediawiki.pages.MediaWikiMainPageDiscussionPage;
-import org.mediawiki.pages.MediaWikiMainPageDiscussionPageEditPage;
 import org.mediawiki.pages.MediaWikiMainPageEditPage;
 import org.openqa.selenium.Keys;
 
@@ -15,7 +15,6 @@ import cucumber.api.java.en.When;
 public class DiscussionPageStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();
-	MediaWikiMainPageDiscussionPageEditPage DEditPage=new MediaWikiMainPageDiscussionPageEditPage();
 	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
 
 

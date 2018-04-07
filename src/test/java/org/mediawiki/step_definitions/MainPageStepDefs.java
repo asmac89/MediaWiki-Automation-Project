@@ -2,9 +2,9 @@ package org.mediawiki.step_definitions;
 
 import static org.testng.Assert.assertTrue;
 
+
 import org.mediawiki.pages.MediaWikiMainPage;
 import org.mediawiki.pages.MediaWikiMainPageDiscussionPage;
-import org.mediawiki.pages.MediaWikiMainPageDiscussionPageEditPage;
 import org.mediawiki.pages.MediaWikiMainPageEditPage;
 
 import cucumber.api.PendingException;
@@ -16,7 +16,6 @@ public class MainPageStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
 	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();
-	MediaWikiMainPageDiscussionPageEditPage DEditPage=new MediaWikiMainPageDiscussionPageEditPage();
 	
 	
 	@Given("^The Main page is displayed$")
