@@ -4,14 +4,36 @@ Background:
 	Given I logged into MediaWiki
 
 
- 	Scenario: Add a topic to the Discussion page
+ 	Scenario: Dropdown list contains proper text
     Given  I see the Main page displayed
 		When I click on the WatchList tab
 		Then I should see the Watchlist options
-		And I select "1" hour on Period of time to display
-		And I select "Hide" checkBox
-		And I click to selector
-		Then I choose "MediaWiki"
-		Then I click "Show" button
-		And I should see result displayed
+		Then I should see the Legend box
+		Then I click on dropdown list
+		And I choose 1 hour from dropdown list
+		And I click on show button
+		Then The text above shoould contains "changes in the last hour"
 		Then I log out of the application
+
+	Scenario:	Dropdown list contains proper text and Legend box works properly 
+		 Given  I see the Main page displayed
+			When I click on the WatchList tab
+			Then I should see the Legend box
+			And I should see the Watchlist Options
+			When I click on Collapse button
+			Then Text in Legend should be equals to "Legend:[Expand]"
+			Then I click on dropdown list
+			And I choose 90 days from dropdown list
+			And I click on show button
+			Then The text above shoould contains "changes in the last 2,160 hours"
+			Then I log out of the application
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
