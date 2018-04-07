@@ -46,14 +46,12 @@ public class EditingDiscussionTabUserPageStepDefs {
 	    
 	}
 
-	@Then("^I should see the Discussion tabs$")
+	@Then("^I should see the Read, Edit, Add topic, View history and Unwatch tabs$")
 	public void i_should_see_the_Discussion_tabs(DataTable discussionTabs) {
-//	    List<WebElement> discussTabs=driver.findElements(By.xpath("//div[@id='p-views']//li"));
-//	    Map<String, String> dTabs;
-//	    
-//	    for(WebElement e:discussTabs) {
-//	    	
-//	    }
+	    List<WebElement> discussTabs=driver.findElements(By.xpath("//div[@id='p-views']//li"));
+	    for(WebElement e:discussTabs) {
+	    		assertTrue(e.isDisplayed());
+	    }
 	}
 
 	@When("^I click on the Edit tab$")
