@@ -50,7 +50,7 @@ public class SearchingPagesStepDefs {
 	@Then("^in the namespace dropdown list, \"([^\"]*)\" should be selected by default$")
 	public void in_the_namespace_dropdown_list_should_be_selected_by_default(String firstDropdownOption) {
 	    Select nameSpaceList=new Select(userPage.nameSpaceDropdown);
-//	   assertTrue(nameSpaceList.getFirstSelectedOption().equals(firstDropdownOption));
+	    assertTrue(nameSpaceList.getFirstSelectedOption().getText().equals(firstDropdownOption));
 	}
 
 	@Then("^I type \"([^\"]*)\" in the Display pages starting at: text box$")
