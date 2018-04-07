@@ -4,6 +4,7 @@ Feature: Discussion Tab on Main Page Functionalities
 	
 Background: 
 Given I logged into MediaWiki
+
 Scenario: Adding a Discussion topic
 Given The Main page is displayed
 When I click on the Discussion tab on main page
@@ -16,8 +17,8 @@ Then I click on save changes button on edit page
 Then "Your edit was saved" popup should be displayed
 And "TechNinja's How to become a SDET" topic should be displayed on edit page
 Then I log out of the application
-@andytest
 
+@andytest
 Scenario Outline: Adding multiple Discussion internal links
 Given The Main page is displayed
 When I click on the Discussion tab on main page

@@ -49,12 +49,12 @@ public void i_click_on_the_internal_link_button_on_Discussion_page() {
 
 @Then("^\"([^\"]*)\" link should be displayed$")
 public void link_should_be_displayed(String Topics) {
-   // DiscussionPage.
+  assertTrue( DiscussionPage.isLinkDisplayed(Topics).isDisplayed());
 }
 
 @Then("^\"([^\"]*)\" is clickable$")
-public void is_clickable(String arg1) {
-   
+public void is_clickable(String arg) {
+   assertTrue(DiscussionPage.isClickable(arg));
 }
 @Then("^I type \"([^\"]*)\" link$")
 public void i_type_link(String text) {

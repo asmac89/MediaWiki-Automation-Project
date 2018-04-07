@@ -52,6 +52,7 @@ public class BrowserUtils {
 		WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
+	
 
 	public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
