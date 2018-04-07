@@ -32,10 +32,23 @@ public class MediaWikiUserPageDiscussion {
 	@FindBy(id="mw-content-text")
 	public WebElement savedTextBox;
 	
+	@FindBy(id="wpSummary")
+	public WebElement subjectField;
+	
 	public void clickOnEdit() {
 		List<WebElement> discussTabs=driver.findElements(By.xpath("//div[@id='p-views']//li"));
 		for(WebElement e:discussTabs) {
 			if(e.getText().equals("Edit")) {
+				e.click();
+				break;
+			}
+		}
+	}
+	
+	public void clickOnAddTopic() {
+		List<WebElement> discussTabs=driver.findElements(By.xpath("//div[@id='p-views']//li"));
+		for(WebElement e:discussTabs) {
+			if(e.getText().equals("Add topic")) {
 				e.click();
 				break;
 			}

@@ -1,0 +1,7 @@
+<suite name="MediaWiki Smoke Automation" verbose="2">
+	<test name="Automated tests">
+		<classes>
+			<class name ="org.mediawiki.runners.SmokeTestRunner"></class>
+		</classes>
+	</test>
+</suite>
