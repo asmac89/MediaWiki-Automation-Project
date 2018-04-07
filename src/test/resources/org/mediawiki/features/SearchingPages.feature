@@ -3,7 +3,7 @@ Feature: Searching Pages
   Background: 
     Given I logged into MediaWiki
 
-  
+ 
   Scenario: Search for all Talk pages
     When I click on special pages
     And I click on all pages

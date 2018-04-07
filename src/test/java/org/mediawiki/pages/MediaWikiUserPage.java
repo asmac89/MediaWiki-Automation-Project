@@ -36,4 +36,12 @@ public class MediaWikiUserPage {
 	@FindBy(xpath="//a[@title='Log out']")
 	public WebElement logoutLink;
 	
+	@FindBy(linkText="Discussion")
+	public WebElement discussionTab;
+	
+	@FindBy(xpath="//div[@id='p-views']//li")
+	public WebElement discussionTabs;
+	
+	
+	
 }
