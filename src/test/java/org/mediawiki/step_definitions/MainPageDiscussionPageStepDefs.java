@@ -1,14 +1,28 @@
 package org.mediawiki.step_definitions;
 
+import static org.testng.Assert.assertEquals;
+
+import org.mediawiki.pages.MediaWikiLoginPage;
+import org.mediawiki.pages.MediaWikiMainPage;
+import org.mediawiki.pages.MediaWikiUserPage;
+import org.mediawiki.utilities.Driver;
+import org.openqa.selenium.WebDriver;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class MainPageDiscussionPageStepDefs {
+	
+	private WebDriver driver=Driver.getDriver();
+	MediaWikiLoginPage loginPage=new MediaWikiLoginPage();
+	MediaWikiMainPage mainPage=new MediaWikiMainPage();
+	MediaWikiUserPage userPage=new MediaWikiUserPage();	
+	
+	
 	@Given("^The Main page is displayed$")
 	public void the_Main_page_is_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		assertEquals(driver.getTitle().toString(), "Cybertek's Wiki!");
 	}
 
 	@Then("^Talk:Main Page title should be displayed$")
@@ -37,12 +51,6 @@ public class MainPageDiscussionPageStepDefs {
 
 	@Then("^\"([^\"]*)\" should be displayed$")
 	public void should_be_displayed(String arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Given("^The Main Page is displayed$")
-	public void the_Main_Page_is_displayed() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}

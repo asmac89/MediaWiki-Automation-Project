@@ -17,7 +17,7 @@ And "TechNinja's Topic" should be displayed
 Then I log out of the application
 
 Scenario: Adding Main Page topic description
-Given The Main Page is displayed
+Given The Main page is displayed
 When I click on the Edit tab 
 Then Editing Main Page topic title should be displayed 
 And I type "TechNinjas are awesome!" inside the topic input box

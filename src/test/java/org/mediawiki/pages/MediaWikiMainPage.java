@@ -27,6 +27,9 @@ public class MediaWikiMainPage {
 	@FindBy(linkText="Read")
 	public WebElement MainPageReadButton;
 	
+	@FindBy(id="pt-watchlist")
+	public WebElement MainPageWatchListButton;
+
 	
 	
 
