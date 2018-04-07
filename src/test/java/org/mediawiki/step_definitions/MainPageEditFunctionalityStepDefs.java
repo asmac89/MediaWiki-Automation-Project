@@ -12,7 +12,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class MainPageStepDefs {
+public class MainPageEditFunctionalityStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
 	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();

@@ -12,7 +12,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class DiscussionPageStepDefs {
+public class DiscussionEditFunctionalityStepDefs {
 	MediaWikiMainPage MainPage=new MediaWikiMainPage();
 	MediaWikiMainPageDiscussionPage DiscussionPage=new MediaWikiMainPageDiscussionPage();
 	MediaWikiMainPageEditPage MEditPage=new MediaWikiMainPageEditPage();
