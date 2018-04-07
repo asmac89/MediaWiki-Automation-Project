@@ -28,6 +28,9 @@ public class MediaWikiMainPage {
 	@FindBy(linkText="Read")
 	public WebElement MainPageReadButton;
 	
+	@FindBy(id="pt-watchlist")
+	public WebElement MainPageWatchListButton;
+	
 	@FindBy(id="mw-editbutton-headline")
 	public WebElement MainPageHeadline;
 
@@ -49,9 +52,6 @@ public class MediaWikiMainPage {
 	public boolean isAtMainPage() {
 		return driver.getTitle().equals("Cybertek's Wiki!");
 	}
-	
-
-	
 	
 	
 

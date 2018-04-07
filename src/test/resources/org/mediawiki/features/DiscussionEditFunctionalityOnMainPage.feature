@@ -44,7 +44,7 @@ Examples:
 |Jenkins Tutorials|
 |Maven Tutorials|
 |HTML Tutorials|
-|Agile Tutorials|
+
 
 
 
