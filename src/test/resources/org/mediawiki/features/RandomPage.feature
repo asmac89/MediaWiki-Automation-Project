@@ -6,8 +6,8 @@ Background:
 Scenario: Click on Random Page
 	When I click on random page
 	Then I should see a random page appear
-	When I click on Random Page again, it should show me a different page instead of displaying the same one
-	
+	And I click on Random Page again, it should show me a different page instead of displaying the same one
+	 Then I log out of the application
 	
 Scenario: Click on Random Page, Edit the page, Save changes, Verify the text is displayed.
 	When I click on random page
@@ -19,5 +19,5 @@ Scenario: Click on Random Page, Edit the page, Save changes, Verify the text is 
 	When I click on Random Page
 	Then I should see a random page appear
 	Then I keep on clicking random page button until the edited page appears
-	Then I should see the text that was added to the page displayed on the page and verify it
-	
+	And I should see the text that was added to the page displayed on the page and verify it
+	Then I log out of the application

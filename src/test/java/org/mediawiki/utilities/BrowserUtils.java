@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+
 public class BrowserUtils {
 
 	private static WebDriver driver = Driver.getDriver();
@@ -81,6 +82,7 @@ public class BrowserUtils {
 					"Timeout waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
 		}
 	}
+	
 
 	public static void waitFor(int sec) {
 		try {

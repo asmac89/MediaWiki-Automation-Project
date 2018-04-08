@@ -51,8 +51,10 @@ public class MediaWikiMainPage {
 	
 	public boolean isAtMainPage() {
 		return driver.getTitle().equals("Cybertek's Wiki!");
+		
 	}
-	
+	@FindBy(linkText="Upload file")
+	public WebElement UploadFileButton;
 	
 
 }
