@@ -2,6 +2,7 @@ package org.mediawiki.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class MediaWikiWatchlistPage {
 
@@ -13,4 +14,13 @@ public class MediaWikiWatchlistPage {
 	public WebElement LegendBox;	
 	
 	//div[@class='mw-changeslist-legend mw-collapsible']
+	@FindBy(id="days")
+	public WebElement daysDropDown;
+	
+	public String selectName() {
+		Select list=new Select(daysDropDown);
+		 list.selectByVisibleText("1 hour");
+		return list.getFirstSelectedOption().getText();
+		 
+}
 }
