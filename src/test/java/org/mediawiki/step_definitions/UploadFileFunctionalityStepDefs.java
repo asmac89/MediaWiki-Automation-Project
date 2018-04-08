@@ -39,7 +39,7 @@ public class UploadFileFunctionalityStepDefs {
 
 	@When("^I upload a file with valid data$")
 	public void I_upload_a_file_with_valid_data() {
-		String file="/Users/afsheensiddiki/Desktop/BLAH.jpg";
+		String file="/Users/afsheensiddiki/Desktop/OKAY.jpg";
 		uploadPage.ChooseFileButton.sendKeys(file);
 	}
 
@@ -56,6 +56,12 @@ public class UploadFileFunctionalityStepDefs {
 	   
 	}
 
+	@Then("^select Ignore any warnings checkbox$")
+	public void select_Ignore_any_warnings_checkbox() {
+	 uploadPage.IgnoreWarningsCheckBox.click();
+	}
+
+	
 	@Then("^verify that Watch this file checkbox should be checked by default$")
 	public void verify_that_watch_this_file_checkbox_should_be_checked_by_default() {
 		assertTrue(uploadPage.Checkbox.isSelected());
@@ -74,13 +80,9 @@ public class UploadFileFunctionalityStepDefs {
 	
 	@Then("^type text in the summary box$")
 	public void type_text_in_the_summary_box() {
-	uploadPage.summaryText.sendKeys("Coders");
+	uploadPage.summaryText.sendKeys("Type");
 	}
 
-	@Then("^select Ignore any warnings checkbox$")
-	public void select_Ignore_any_warnings_checkbox() {
-	 uploadPage.IgnoreWarningsCheckBox.isSelected();
-	}
 
 	@Then("^verify the text is displayed in the File History section under the comment column on File Page$")
 	public void verify_the_text_is_displayed_in_the_File_History_section_under_the_comment_column_on_File_Page() {

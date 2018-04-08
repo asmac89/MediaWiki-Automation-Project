@@ -18,7 +18,7 @@ private WebDriver driver;
 	@FindBy(xpath="//a[@title='Log out']")
 	public WebElement logoutLink;
 	
-	@FindBy(xpath="//a[@title='BLAH.jpg']")
+	@FindBy(xpath="//a[@title='OKAY.jpg']")
 	public WebElement uploadText;
 	
 	@FindBy(xpath="//td[@dir='ltr']")

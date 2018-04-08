@@ -37,6 +37,5 @@ public class MediaWikiUploadFilePage {
 
 	@FindBy(name="wpIgnoreWarning")
 	public WebElement IgnoreWarningsCheckBox;
-;
 
 }
