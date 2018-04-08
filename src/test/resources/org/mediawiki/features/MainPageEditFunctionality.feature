@@ -1,6 +1,6 @@
 
 
-
+@smoke
 Feature: Main Page topic Functionalities
 
 Background: 

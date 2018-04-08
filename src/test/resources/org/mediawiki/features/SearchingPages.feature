@@ -3,7 +3,7 @@ Feature: Searching Pages
   Background: 
     Given I logged into MediaWiki
 
- @asmatest
+
   Scenario: Search for all Talk pages
     When I click on special pages
     And I click on all pages
@@ -13,7 +13,7 @@ Feature: Searching Pages
     And I select "Talk" in the namespace dropdown list
     Then all "Talk" pages should be displayed below
     Then I log out of the application
-
+  @asmatest
   Scenario: Search for all Cybertek's Wiki! pages
     When I click on special pages
     And I click on all pages

@@ -44,8 +44,7 @@ public class WatchListPageStepDefenition {
 
 	@Then("^I choose (\\d+) hour from dropdown list$")
 	public void i_choose_hour_from_dropdown_list(int arg1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		watchList.daysDropDown.click();
 	}
 
 	@Then("^I click on show button$")
