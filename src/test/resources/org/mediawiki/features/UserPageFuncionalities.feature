@@ -5,18 +5,18 @@ Feature: User page Functionalities:
 	Given I logged into MediaWiki
 	@johnathantest	 
   Scenario: Edit user section in main page
-  		Given the Main page is displayed
+  		Given The Main page is displayed
   		And I click on TechNinjas7 link
   		Then User page should be displayed
     When I click on edit tab on User page
-    And I edit the section name to "TechNinjas"
+    And I edit the input box to "TechNinjas"
     When I click on the save button
-    Then I should see the topic section for "TechNinjas"
+    Then "TechNinjas" should be displayed on UserPage
 		Then I log out of the application
 		
 		
   Scenario: View history of changes made to application
-  Given the Main page is displayed
+  Given The Main page is displayed
   And I click on TechNinjas7 link
   	Then User page should be displayed
   Then I click on the "View History" tab
