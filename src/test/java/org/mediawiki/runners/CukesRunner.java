@@ -7,11 +7,18 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin= {"pretty",
 				"html:target/cucumber-report"},
 
+
 		tags="@johnathantest",
+
+		
+		
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",
+
 		dryRun=true //by default, it is false
 		//branch 'master' of https://github.com/asmac89/MediaWiki-Automation-Project.git
+
+		
 		)
 
 public class CukesRunner extends AbstractTestNGCucumberTests {

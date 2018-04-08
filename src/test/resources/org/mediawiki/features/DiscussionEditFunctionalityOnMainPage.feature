@@ -5,6 +5,7 @@ Feature: Discussion Tab on Main Page Functionalities
 Background: 
 Given I logged into MediaWiki
 
+@smoke
 Scenario: Adding a Discussion topic
 Given The Main page is displayed
 When I click on the Discussion tab on main page
@@ -43,7 +44,7 @@ Examples:
 |Jenkins Tutorials|
 |Maven Tutorials|
 |HTML Tutorials|
-|Agile Tutorials|
+
 
 
 
