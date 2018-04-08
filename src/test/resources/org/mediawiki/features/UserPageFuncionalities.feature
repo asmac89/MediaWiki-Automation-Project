@@ -1,12 +1,14 @@
-@johnathantesting
+
 Feature: User page Functionalities:
   
  Background: 
 	Given I logged into MediaWiki
-	 
+	@johnathantest	 
   Scenario: Edit user section in main page
-    When I click on edit tab
-    And I click on edit main page section
+  		Given the Main page is displayed
+  		And I click on TechNinjas7 link
+  		Then User page should be displayed
+    When I click on edit tab on User page
     And I edit the section name to "TechNinjas"
     When I click on the save button
     Then I should see the topic section for "TechNinjas"
@@ -14,6 +16,9 @@ Feature: User page Functionalities:
 		
 		
   Scenario: View history of changes made to application
+  Given the Main page is displayed
+  And I click on TechNinjas7 link
+  	Then User page should be displayed
   Then I click on the "View History" tab
   Then I see the revision history section and view all the changes made on the application
   Then I choose two revisions to compare
