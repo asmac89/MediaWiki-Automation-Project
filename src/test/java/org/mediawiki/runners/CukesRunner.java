@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin= {"pretty",
 				"html:target/cucumber-report"},
 
-		tags="@iliaStepanov",
+		tags="@vera4",
 
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",
