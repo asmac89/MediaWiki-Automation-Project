@@ -1,4 +1,4 @@
-Feature: 
+Feature: Advanced Search
 
   Background: 
     Given I logged into MediaWiki
