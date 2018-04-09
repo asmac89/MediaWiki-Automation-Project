@@ -30,7 +30,7 @@ public class MediaWikiMainPage {
 	
 	@FindBy(id="pt-watchlist")
 	public WebElement MainPageWatchListButton;
-	
+
 	@FindBy(id="mw-editbutton-headline")
 	public WebElement MainPageHeadline;
 
