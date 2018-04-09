@@ -1,6 +1,6 @@
 Feature: Check Search Box
 
-@iliaStepanov
+@scenariotest
   Scenario: Dropdown list contains proper text
     Given I logged into MediaWiki
     Given The Main page is displayed
@@ -12,7 +12,7 @@ Feature: Check Search Box
     Then The text above shoould contains changes in the last hour"changes in the last hour"
     Then I log out of the application
     
-@iliaStepanov
+@scenariotest
   Scenario: Dropdown list contains proper text and Legend box works properly
     Given I logged into MediaWiki
     Given The Main page is displayed

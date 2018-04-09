@@ -1,11 +1,11 @@
 
 
-@smoke
+
 Feature: Main Page topic Functionalities
 
 Background: 
 Given I logged into MediaWiki
-
+@smoke
 Scenario: Adding Main Page topic 
 Given The Main page is displayed
 When I click on the Edit tab on main page

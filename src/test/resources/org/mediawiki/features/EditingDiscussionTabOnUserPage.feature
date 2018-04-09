@@ -14,7 +14,7 @@ Feature: Editing discussion tab on user page
     When I click on save changes button
     Then the text "Asma is testing to see if this really works" should be displayed on the newly loaded Discussion page
     Then I log out of the application
-
+@scenariotest
   Scenario: Add a topic to the Discussion page
     Given that I see the User page displayed
     When I click on the Discussion tab

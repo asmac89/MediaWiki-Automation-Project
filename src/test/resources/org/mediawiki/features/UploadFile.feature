@@ -1,10 +1,11 @@
 #Made by Afsheen
+
 Feature: Upload Files
 
   Background: 
     Given I logged into MediaWiki
 
-  @AfsheensTest
+ # @AfsheensTest
   Scenario: Upload a File
     When I click on Upload File
     Then I click on Choose File
@@ -16,7 +17,7 @@ Feature: Upload Files
     Then I click on Upload button
     And you should see the uploaded file on the file page by verifying text of the file
 
-  @AfsheensTest
+ # @AfsheensTest
   Scenario: Upload a File, Enter text in Summary and Select Checkbox
     When I click on Upload File
     Then I click on Choose File
