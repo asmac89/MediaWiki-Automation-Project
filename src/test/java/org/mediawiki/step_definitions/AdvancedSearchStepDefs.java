@@ -56,7 +56,7 @@ public class AdvancedSearchStepDefs {
 	   search.searchOnAdvance.click();
 	}
 	
-	@Then("^I should  be sble too see result$")
+	@Then("^I should  be able too see result$")
 	public void i_should_be_sble_too_see_result() {
 	    assertTrue(search.titleMatches.getText().equals("Page title matches"));
 	}

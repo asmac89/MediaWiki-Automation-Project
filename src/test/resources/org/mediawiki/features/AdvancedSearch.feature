@@ -2,7 +2,7 @@ Feature:
 
   Background: 
     Given I logged into MediaWiki
-@vera3
+@scenariotest
   Scenario: Advanced  Search Functionality
     Given The Main page is displayed
     When I click on special pages
@@ -13,10 +13,10 @@ Feature:
     Then uncheck "Main"
     And check "Talk"
     Then click Search button
-    And I should  be sble too see result
+    And I should  be able too see result
     Then I log out of the application
 
-    @vera4
+    @ver4
     
     Scenario: Search with wildcard
     Given The Main page is displayed
