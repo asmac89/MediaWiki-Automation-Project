@@ -8,11 +8,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"html:target/cucumber-report"},
 
 
-
-		
-
-
 		tags="@scenariotest",
+
 
 
 		features="src/test/resources/org/mediawiki/features/",
