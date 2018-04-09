@@ -42,6 +42,24 @@ public class MediaWikiUserPage {
 	@FindBy(xpath="//div[@id='p-views']//li")
 	public WebElement discussionTabs;
 	
+	@FindBy(linkText="Edit")
+	public WebElement editTab;
+	
+	@FindBy(id="wpTextbox1")
+	public WebElement inputBox;
+	
+	@FindBy(id="wpSave")
+	public WebElement saveChanges;
+	
+	@FindBy(xpath="//div[@class='mw-parser-output']//p")
+	public WebElement description;
+	
+	
+	public boolean isAtUserPage() {
+		return driver.getTitle().equals("User:Techninjas7 - Cybertek's Wiki!");
+	}
+	
+	
 	
 	
 }

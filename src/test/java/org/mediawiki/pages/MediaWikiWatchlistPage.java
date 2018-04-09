@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import org.openqa.selenium.support.ui.Select;
+
 public class MediaWikiWatchlistPage {
 	
 	private WebDriver driver;
@@ -21,7 +23,7 @@ public class MediaWikiWatchlistPage {
 	
 	@FindBy(xpath="//div[@class='mw-changeslist-legend mw-collapsible']")
 	public WebElement LegendBox;	
-	
+
 	@FindBy(id="days")
 	public WebElement WatchlistDropDownDays;
 	
@@ -38,5 +40,12 @@ public class MediaWikiWatchlistPage {
 	public WebElement WatchlistCollapseText;
 	
 	
-
+	@FindBy(id="days")
+	public WebElement daysDropDown;
+	
+	public String selectName() {
+		Select list=new Select(daysDropDown);
+		 list.selectByVisibleText("1 hour");
+		return list.getFirstSelectedOption().getText();
+}
 }

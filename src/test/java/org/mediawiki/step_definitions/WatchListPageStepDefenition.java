@@ -46,12 +46,17 @@ public class WatchListPageStepDefenition {
 		Select select = new Select(watchList.WatchlistDropDownDays);
 		select.selectByVisibleText(oneHoure);
 	}
-	
+
 	@Then("^I choose (\\d+) days \"([^\"]*)\" from dropdown list$")
 	public void i_choose_days_from_dropdown_list(int arg1, String days90) {
 		Select select = new Select(watchList.WatchlistDropDownDays);
 		select.selectByVisibleText(days90);
 	}
+
+	@Then("^I choose (\\d+) hour from dropdown list$")
+	public void i_choose_hour_from_dropdown_list(int arg1) {
+		watchList.daysDropDown.click();
+}
 
 	@Then("^I click on show button$")
 	public void i_click_on_show_button() {
