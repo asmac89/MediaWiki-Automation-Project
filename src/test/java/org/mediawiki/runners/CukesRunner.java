@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 
-		tags="@scenariotest",
+		
 
 
 		tags="@scenariotest",
