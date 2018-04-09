@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin= {"pretty",
 				"html:target/cucumber-report"},
 
-<<<<<<< HEAD
+
 
 		tags="@scenariotest",
 
