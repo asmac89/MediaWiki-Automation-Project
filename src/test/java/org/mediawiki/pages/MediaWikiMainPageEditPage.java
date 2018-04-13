@@ -29,7 +29,10 @@ private WebDriver driver;
 	
 	public void CatchAlert() {
 		Alert alert=driver.switchTo().alert();
+		
+		
 	}
 	
-	
+	@FindBy(xpath="//div[@id='mw-content-text']")
+	public WebElement verifyText;
 }
