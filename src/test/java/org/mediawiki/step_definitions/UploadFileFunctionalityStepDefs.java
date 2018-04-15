@@ -39,7 +39,7 @@ public class UploadFileFunctionalityStepDefs {
 
 	@When("^I upload a file with valid data$")
 	public void I_upload_a_file_with_valid_data() {
-		String file="/Users/afsheensiddiki/Desktop/OKAY.jpg";
+		String file="*/src/test/resources/data/OKAY.jpg";
 		uploadPage.ChooseFileButton.sendKeys(file);
 	}
 
