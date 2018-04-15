@@ -7,6 +7,7 @@ import org.mediawiki.pages.MediaWikiLoginPage;
 import org.mediawiki.pages.MediaWikiMainPage;
 import org.mediawiki.pages.MediaWikiUploadFilePage;
 import org.mediawiki.utilities.BrowserUtils;
+import org.mediawiki.utilities.ConfigurationReader;
 import org.mediawiki.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,8 +40,13 @@ public class UploadFileFunctionalityStepDefs {
 
 	@When("^I upload a file with valid data$")
 	public void I_upload_a_file_with_valid_data() {
-		String file="*/src/test/resources/data/OKAY.jpg";
-		uploadPage.ChooseFileButton.sendKeys(file);
+		
+		
+		String filePath = System.getProperty("user.dir")+"/src/test/resources/data/OKAY.jpg";
+		//String filePath = System.getProperty("user.dir", "/src/test/resources/data/OKAY.jpg");
+//		String file="*/src/test/resources/data/OKAY.jpg";
+		
+		uploadPage.ChooseFileButton.sendKeys(filePath);
 	}
 
 	@Then("^The uploaded file should be displayed automatically in Destination filename$")
