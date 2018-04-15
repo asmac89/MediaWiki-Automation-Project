@@ -7,7 +7,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin= {"pretty",
 				"html:target/cucumber-report"},
 
-		tags="@Afsheeen",
+		tags="AfsheensTest",
+
 
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",
