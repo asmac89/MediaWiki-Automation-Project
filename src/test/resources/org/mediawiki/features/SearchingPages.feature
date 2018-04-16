@@ -1,11 +1,10 @@
-
+@functionality
 Feature: Searching Pages
 
 
   Background: 
     Given I logged into MediaWiki
 
-@scenariotest
   Scenario: Search for all Talk pages
     When I click on special pages
     And I click on all pages

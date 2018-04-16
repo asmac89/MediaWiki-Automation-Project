@@ -1,8 +1,10 @@
+@functionality
+
 Feature: Advanced Search
 
   Background: 
     Given I logged into MediaWiki
-@scenariotest
+
   Scenario: Advanced  Search Functionality
     Given The Main page is displayed
     When I click on special pages
@@ -16,7 +18,6 @@ Feature: Advanced Search
     And I should  be able too see result
     Then I log out of the application
 
-    @ver4
     
     Scenario: Search with wildcard
     Given The Main page is displayed

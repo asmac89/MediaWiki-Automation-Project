@@ -5,9 +5,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		plugin= {"pretty",
-				"html:target/cucumber-report"},
+				"html:target/cucumber-report",
+				"json:target/cucumber.json"
+				},
 
-		tags="AfsheensTest",
+		tags="@functionality",
 
 
 		features="src/test/resources/org/mediawiki/features/",

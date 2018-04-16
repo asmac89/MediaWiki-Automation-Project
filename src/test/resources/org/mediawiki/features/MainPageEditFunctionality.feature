@@ -1,4 +1,4 @@
-
+@functionality
 
 
 Feature: Main Page topic Functionalities

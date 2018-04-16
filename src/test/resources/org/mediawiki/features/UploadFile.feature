@@ -1,5 +1,5 @@
-#Made by Afsheen
- @AfsheensTest
+@functionality
+
 Feature: Upload Files
 
   Background: 

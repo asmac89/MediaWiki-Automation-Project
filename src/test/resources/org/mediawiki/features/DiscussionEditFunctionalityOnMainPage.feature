@@ -1,4 +1,4 @@
-
+@functionality
 
 Feature: Discussion Tab on Main Page Functionalities
 	
@@ -19,7 +19,6 @@ Then "Your edit was saved" popup should be displayed
 And "TechNinja's How to become a SDET" topic should be displayed on edit page
 Then I log out of the application
 
-@scenariotest
 Scenario Outline: Adding multiple Discussion internal links
 Given The Main page is displayed
 When I click on the Discussion tab on main page
