@@ -11,7 +11,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 		tags="@functionality",
 
-
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",
 		dryRun=false //by default, it is false
