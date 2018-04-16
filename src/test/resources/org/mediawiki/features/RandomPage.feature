@@ -1,4 +1,5 @@
-@Afsheeen
+@functionality
+
 Feature: Random Page
 
 
@@ -10,6 +11,7 @@ Scenario: Click on Random Page
 	Then I should see a random page appear
 	And I click on Random Page again, it should show me a different page instead of displaying the same one
  Then I log out of the application
+ 
 Scenario: Click on Random Page, Edit the page, Save changes, Verify the text is displayed.
 	When I click on random page
 	Then I should see a random page appear

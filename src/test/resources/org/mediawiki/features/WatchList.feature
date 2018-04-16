@@ -1,6 +1,7 @@
+@functionality
+
 Feature: Check Search Box
 
-@scenariotest
   Scenario: Dropdown list contains proper text
     Given I logged into MediaWiki
     Given The Main page is displayed

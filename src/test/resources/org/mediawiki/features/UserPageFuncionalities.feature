@@ -1,4 +1,4 @@
-
+@functionality
 Feature: User page Functionalities:
   
  Background: 
