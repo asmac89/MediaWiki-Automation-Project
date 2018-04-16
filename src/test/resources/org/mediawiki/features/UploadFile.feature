@@ -1,4 +1,4 @@
-@bob
+@functionality
 
 Feature: Upload Files
 

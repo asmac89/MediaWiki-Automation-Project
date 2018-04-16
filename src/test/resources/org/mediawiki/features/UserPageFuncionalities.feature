@@ -14,8 +14,6 @@ Feature: User page Functionalities:
     Then "TechNinjas" should be displayed on UserPage
 		Then I log out of the application
 		
-			 
-	@johnathantest	
   Scenario: View history of changes made to application
   Given The Main page is displayed
   And I click on TechNinjas7 link

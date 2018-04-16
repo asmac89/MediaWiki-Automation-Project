@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json"
 				},
 
-		tags="@bob",
+		tags="@functionality",
 
 		features="src/test/resources/org/mediawiki/features/",
 		glue="org/mediawiki/step_definitions",

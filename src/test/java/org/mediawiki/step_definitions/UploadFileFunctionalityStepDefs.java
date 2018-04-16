@@ -43,7 +43,7 @@ public class UploadFileFunctionalityStepDefs {
 	@When("^I upload a file with valid data$")
 	public void I_upload_a_file_with_valid_data() {
 		
-		String filePath = System.getProperty("user.dir")+"/src/test/resources/data/BOB.jpg";	
+		String filePath = System.getProperty("user.dir")+"/src/test/resources/org/mediawiki/resources/data/OKAY.jpg";	
 		uploadPage.ChooseFileButton.sendKeys(filePath);
 	}
 
