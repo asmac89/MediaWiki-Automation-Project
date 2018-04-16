@@ -9,7 +9,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber.json"
 				},
 
+<<<<<<< HEAD
 		tags="@functionality",
+=======
+		tags="@johnathantest",
+>>>>>>> stash
 
 
 		features="src/test/resources/org/mediawiki/features/",

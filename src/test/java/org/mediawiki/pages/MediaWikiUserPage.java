@@ -54,12 +54,29 @@ public class MediaWikiUserPage {
 	@FindBy(xpath="//div[@class='mw-parser-output']//p")
 	public WebElement description;
 	
+	@FindBy(linkText="View history")
+	public WebElement history;
+	
+	@FindBy(name="diff")
+	public WebElement currentButton;
+	
+	@FindBy(xpath="//input[@id='mw-oldid-595']")
+	public WebElement olderButton;
+	
+	@FindBy(xpath="//input[@class='historysubmit mw-history-compareselectedversions-button']")
+	public WebElement compareButton;
 	
 	public boolean isAtUserPage() {
 		return driver.getTitle().equals("User:Techninjas7 - Cybertek's Wiki!");
 	}
 	
+	public boolean isAtHistoryPage() {
+		return driver.getTitle().equals("Revision history of \"User:Techninjas7\" - Cybertek's Wiki!");
+		
+	}
 	
-	
-	
+	public boolean isAtComparePage() {
+		return driver.getTitle().equals("Difference between revisions of \"User:Techninjas7\" - Cybertek's Wiki!");
+		
+	}
 }

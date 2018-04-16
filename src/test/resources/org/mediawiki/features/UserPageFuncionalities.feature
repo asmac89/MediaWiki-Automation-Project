@@ -15,16 +15,16 @@ Feature: User page Functionalities:
 		Then I log out of the application
 		
 			 
-		
+	@johnathantest	
   Scenario: View history of changes made to application
   Given The Main page is displayed
   And I click on TechNinjas7 link
   	Then User page should be displayed
   Then I click on the "View History" tab
   Then I see the revision history section and view all the changes made on the application
-  Then I choose two revisions to compare
+  Then I choose the first revision to compare with the default
   When I click on the button "compare selected revisions"
- 	Then I should see side by side comparisons and chnaged taht were made to the appllication
+ 	Then I should see side by side comparisons and changes that were made to the appllication
  	Then I log out of the application
   
   
