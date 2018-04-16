@@ -27,4 +27,3 @@ Then "Your edit was saved" popup should be displayed
 And "TechNinjas are awesome!" description should be displayed 
 Then I log out of the application
 
-
