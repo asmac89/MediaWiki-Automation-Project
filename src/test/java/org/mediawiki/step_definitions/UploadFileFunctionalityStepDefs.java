@@ -2,6 +2,8 @@ package org.mediawiki.step_definitions;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.File;
+
 import org.mediawiki.pages.MediaWikiFilePage;
 import org.mediawiki.pages.MediaWikiLoginPage;
 import org.mediawiki.pages.MediaWikiMainPage;
@@ -41,11 +43,7 @@ public class UploadFileFunctionalityStepDefs {
 	@When("^I upload a file with valid data$")
 	public void I_upload_a_file_with_valid_data() {
 		
-		
-		String filePath = System.getProperty("user.dir")+"/src/test/resources/data/OKAY.jpg";
-		//String filePath = System.getProperty("user.dir", "/src/test/resources/data/OKAY.jpg");
-//		String file="*/src/test/resources/data/OKAY.jpg";
-		
+		String filePath = System.getProperty("user.dir")+"/src/test/resources/data/BOB.jpg";	
 		uploadPage.ChooseFileButton.sendKeys(filePath);
 	}
 
